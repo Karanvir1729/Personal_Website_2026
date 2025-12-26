@@ -3,6 +3,11 @@ import { useOSStore } from '../../store/useOSStore';
 import { Taskbar } from './Taskbar';
 import { Window } from './Window';
 import { apps } from '../../apps/registry';
+import { ChessStatsWidget } from './ChessStatsWidget';
+import { GitHubWidget } from './GitHubWidget';
+import { LinkedInWidget } from './LinkedInWidget';
+import { DevPostWidget } from './DevPostWidget';
+import { MediumWidget } from './MediumWidget';
 
 export const Desktop = () => {
     const { windows } = useOSStore();
@@ -59,6 +64,25 @@ export const Desktop = () => {
                         </span>
                     </button>
                 ))}
+            </div>
+
+            {/* Desktop Widgets - Hidden on mobile/tablet */}
+            <div className="absolute top-6 right-6 z-0 hidden xl:flex flex-col gap-4 pointer-events-none">
+                <div className="pointer-events-auto">
+                    <MediumWidget />
+                </div>
+                <div className="pointer-events-auto">
+                    <GitHubWidget />
+                </div>
+                <div className="pointer-events-auto">
+                    <ChessStatsWidget />
+                </div>
+                <div className="pointer-events-auto">
+                    <LinkedInWidget />
+                </div>
+                <div className="pointer-events-auto">
+                    <DevPostWidget />
+                </div>
             </div>
 
             {/* Branding Footer - hidden on mobile */}

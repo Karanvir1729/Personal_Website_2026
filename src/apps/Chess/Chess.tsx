@@ -20,6 +20,9 @@ export const Chess: React.FC = () => {
         undoMove
     } = useChessGame();
 
+    // Workaround for type mismatch in react-chessboard
+    const ChessBoardAny = Chessboard as any;
+
     // Expose game control for programmatic testing (avoiding UI flakiness)
     React.useEffect(() => {
         // @ts-ignore - Adding to window for testing
@@ -40,6 +43,7 @@ export const Chess: React.FC = () => {
     const [selectedSquare, setSelectedSquare] = useState<Square | null>(null);
 
     const onSquareClick = (square: Square) => {
+        console.log(`onSquareClick: ${square}`, { isThinking, turn: gameState.turn, playerColor });
         if (isThinking || gameState.turn !== playerColor) return;
 
         if (selectedSquare) {
@@ -54,6 +58,7 @@ export const Chess: React.FC = () => {
     };
 
     const onDrop = (sourceSquare: Square, targetSquare: Square): boolean => {
+        console.log(`onDrop: ${sourceSquare} -> ${targetSquare}`, { isThinking, turn: gameState.turn, playerColor });
         if (isThinking || gameState.turn !== playerColor) return false;
         const success = makeMove(sourceSquare, targetSquare);
         setSelectedSquare(null);
@@ -125,11 +130,17 @@ export const Chess: React.FC = () => {
                             </div>
 
                             {/* Board */}
-                            <div className={`relative ${isThinking ? 'pointer-events-none opacity-90' : ''}`}>
-                                <Chessboard
+                            <div className={`relative ${isThinking ? 'opacity-90' : ''}`}>
+                                <ChessBoardAny
                                     position={gameState.fen}
-                                    onPieceDrop={onDrop}
-                                    onSquareClick={onSquareClick}
+                                    onPieceDrop={(source: Square, target: Square) => {
+                                        console.log('Drop:', source, target);
+                                        return onDrop(source, target);
+                                    }}
+                                    onSquareClick={(square: Square) => {
+                                        console.log('Click:', square);
+                                        onSquareClick(square);
+                                    }}
                                     boardOrientation={playerColor === 'b' ? 'black' : 'white'}
                                     arePiecesDraggable={isPlayerTurn}
                                     customBoardStyle={{

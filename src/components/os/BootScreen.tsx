@@ -32,7 +32,7 @@ export const BootScreen: React.FC<BootScreenProps> = ({ onComplete }) => {
     const [progress, setProgress] = useState(0);
     const [showLogo, setShowLogo] = useState(false);
     const currentLineRef = useRef(0);
-    const timeoutsRef = useRef<NodeJS.Timeout[]>([]);
+    const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
     const onCompleteRef = useRef(onComplete);
 
     // Keep onComplete ref updated

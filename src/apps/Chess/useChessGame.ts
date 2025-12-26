@@ -238,14 +238,35 @@ export const useChessGame = () => {
     }, [gameState.turn, gameState.gameOver, playerColor, isThinking, makeBotMove]);
 
     const makeMove = useCallback((from: Square, to: Square): boolean => {
-        if (gameState.turn !== playerColor || isThinking) return false;
+        if (gameState.turn !== playerColor || isThinking) {
+            console.log('Move rejected: Not player turn or thinking', { turn: gameState.turn, playerColor, isThinking });
+            return false;
+        }
 
         try {
-            const move = gameRef.current.move({ from, to, promotion: 'q' });
-            if (!move) return false;
+            // Check for promotion
+            const piece = gameRef.current.get(from);
+            const isPromotion = piece?.type === 'p' && (
+                (piece.color === 'w' && to[1] === '8') ||
+                (piece.color === 'b' && to[1] === '1')
+            );
+
+            const move = gameRef.current.move({
+                from,
+                to,
+                promotion: isPromotion ? 'q' : undefined
+            });
+
+            if (!move) {
+                console.log('Move rejected: Invalid move', { from, to });
+                return false;
+            }
+
+            console.log('Move successful:', move);
             updateGameState();
             return true;
-        } catch {
+        } catch (e) {
+            console.error('Move error:', e);
             return false;
         }
     }, [gameState.turn, playerColor, isThinking, updateGameState]);

@@ -1,6 +1,6 @@
 //Window.tsx
 import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useDragControls } from 'framer-motion';
 import { X, Minus, Square, Maximize2 } from 'lucide-react';
 import { useOSStore } from '../../store/useOSStore';
 import type { WindowState } from '../../store/useOSStore';
@@ -14,6 +14,7 @@ interface WindowProps {
 export const Window: React.FC<WindowProps> = ({ window }) => {
     const { closeWindow, minimizeWindow, maximizeWindow, focusWindow } = useOSStore();
     const isMobile = useIsMobile();
+    const dragControls = useDragControls();
     const [isResizing, setIsResizing] = useState(false);
     const startPos = useRef<{ x: number, y: number } | null>(null);
     const startSize = useRef<{ width: number, height: number } | null>(null);
@@ -83,6 +84,8 @@ export const Window: React.FC<WindowProps> = ({ window }) => {
                 zIndex: window.zIndex,
             }}
             drag={!isFullscreen}
+            dragListener={false}
+            dragControls={dragControls}
             dragMomentum={false}
             onDragStart={() => focusWindow(window.id)}
             onMouseDown={handleMouseDown}
@@ -94,8 +97,11 @@ export const Window: React.FC<WindowProps> = ({ window }) => {
         >
             {/* Title Bar */}
             <div
-                className="h-10 bg-white/5 flex items-center justify-between px-3 select-none cursor-default"
+                className="h-10 bg-white/5 flex items-center justify-between px-3 select-none cursor-default touch-none"
                 onDoubleClick={() => maximizeWindow(window.id)}
+                onPointerDown={(e) => {
+                    if (!isFullscreen) dragControls.start(e);
+                }}
             >
                 <div className="flex items-center gap-2">
                     {/* If we had an icon component, render it here */}
