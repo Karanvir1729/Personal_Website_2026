@@ -1,0 +1,179 @@
+{
+    "profile": {
+        "name": "Karanvir (Karan) Khanna",
+        "headline": "Builder who ships | CS @ UofT 2026",
+        "email": "karan.khanna@mail.utoronto.ca",
+        "links": {
+            "github": "https://github.com/Karanvir1729",
+            "linkedin": "https://www.linkedin.com/in/karan-khanna-b7013b24b/",
+            "devpost": "https://devpost.com/prokaranvir"
+        }
+    },
+    "education": [
+        {
+            "school": "University of Toronto",
+            "degree": "Honours Bachelor of Science, Computer Science",
+            "graduation": "Apr 2026",
+            "details": [
+                "CGPA 3.7/4.0",
+                "Dean’s List",
+                "Focus: AI, Systems, Theory"
+            ]
+        }
+    ],
+    "experience": [
+        {
+            "id": "ippinka",
+            "role": "Software Engineer Intern",
+            "company": "IPPINKA",
+            "duration": "Jun 2024 – Sept 2025",
+            "description": "Led automation and potential optimization initiatives.",
+            "bullets": [
+                "Orchestrated purchasing operational (PO) optimization system using Python and linear solvers.",
+                "Implemented forecasting models to predict inventory needs.",
+                "Deployed infrastructure for automated scraping and data pipelines.",
+                "Mentored junior interns and led code reviews."
+            ],
+            "tech": [
+                "Python",
+                "Pandas",
+                "AWS",
+                "Linear Programming"
+            ]
+        },
+        {
+            "id": "kpmg",
+            "role": "Software Engineer Intern",
+            "company": "KPMG",
+            "duration": "May – Oct 2023",
+            "description": "Built AI assistants and governance tools.",
+            "bullets": [
+                "Developed AI assistants for internal audit workflows.",
+                "Built governance pipelines to ensure compliance with AI safety standards.",
+                "Evaluated vendor tools and created adoption playbooks."
+            ],
+            "tech": [
+                "AI/ML",
+                "Python",
+                "Azure",
+                "Governance"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "id": "tarazoo",
+            "title": "Tarazoo",
+            "description": "HTN 2025 Winner. A project focusing on optimizing something (details inferred).",
+            "tech": [
+                "React",
+                "Python"
+            ],
+            "links": {
+                "demo": "",
+                "repo": ""
+            }
+        },
+        {
+            "id": "auto-po",
+            "title": "Automated PO System",
+            "description": "Automated purchasing decisions based on forecast demand.",
+            "tech": [
+                "Python",
+                "Optimization"
+            ],
+            "links": {}
+        },
+        {
+            "id": "lights",
+            "title": "Tormented by Lights",
+            "description": "Game Jam 2025 Winner. A horror/puzzle game.",
+            "tech": [
+                "Unity",
+                "C#"
+            ],
+            "links": {}
+        },
+        {
+            "id": "definition-finder",
+            "title": "Definition Finder",
+            "description": "DeerHacks 2022 Winner. Tool to quickly find definitions in complex texts.",
+            "tech": [
+                "NLP",
+                "Python"
+            ],
+            "links": {}
+        },
+        {
+            "id": "matroid",
+            "title": "Matroid Theory Research",
+            "description": "Research paper on Matroid Theory produced during undergraduate studies.",
+            "tech": [
+                "Math",
+                "LaTeX"
+            ],
+            "links": {}
+        }
+    ],
+    "skills": {
+        "languages": [
+            "Python",
+            "TypeScript",
+            "Java",
+            "C++",
+            "SQL"
+        ],
+        "frameworks": [
+            "React",
+            "Next.js",
+            "Node.js",
+            "Tailwind CSS",
+            "Framer Motion"
+        ],
+        "tools": [
+            "Git",
+            "Docker",
+            "AWS",
+            "Linux",
+            "Vim"
+        ],
+        "concepts": [
+            "Optimization",
+            "Data Governance",
+            "System Design",
+            "Machine Learning"
+        ]
+    },
+    "filesystem": {
+        "home": {
+            "type": "dir",
+            "children": {
+                "karan": {
+                    "type": "dir",
+                    "children": {
+                        "about.txt": {
+                            "type": "file",
+                            "content": "Hi, I'm Karan. I build systems that work."
+                        },
+                        "experience": {
+                            "type": "dir",
+                            "children": {}
+                        },
+                        "projects": {
+                            "type": "dir",
+                            "children": {}
+                        },
+                        "skills.json": {
+                            "type": "file",
+                            "content": "See Skills App"
+                        },
+                        "contact.vcf": {
+                            "type": "file",
+                            "content": "Karanvir Khanna\nkaran.khanna@mail.utoronto.ca"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
