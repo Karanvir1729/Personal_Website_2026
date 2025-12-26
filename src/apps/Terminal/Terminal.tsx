@@ -72,19 +72,23 @@ export const Terminal: React.FC = () => {
                 ))}
 
                 {/* Active Input Line */}
-                <div className="flex gap-2">
-                    <span className="text-green-400 font-bold">karan@web-os</span>
-                    <span className="text-white">:</span>
-                    <span className="text-blue-400 font-bold">{currentPath}</span>
-                    <span className="text-white">$</span>
+                <div className="flex gap-2 items-center">
+                    <span className="text-green-400 font-bold text-xs sm:text-sm whitespace-nowrap">karan@web-os</span>
+                    <span className="text-white text-xs sm:text-sm">:</span>
+                    <span className="text-blue-400 font-bold text-xs sm:text-sm truncate max-w-[80px] sm:max-w-none">{currentPath}</span>
+                    <span className="text-white text-xs sm:text-sm">$</span>
                     <input
                         ref={inputRef}
                         type="text"
+                        inputMode="text"
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyDown}
-                        className="flex-1 bg-transparent outline-none border-none text-[#cdd6f4]"
+                        className="flex-1 bg-transparent outline-none border-none text-[#cdd6f4] text-sm sm:text-base min-w-0"
                         autoComplete="off"
+                        autoCapitalize="off"
+                        autoCorrect="off"
+                        spellCheck={false}
                         autoFocus
                     />
                 </div>

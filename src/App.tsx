@@ -1,3 +1,4 @@
+//app.tsx
 import React, { useState } from 'react';
 import { Desktop } from './components/os/Desktop';
 import { BootScreen } from './components/os/BootScreen';

@@ -37,8 +37,8 @@ export const Desktop = () => {
             {/* Overlay for tint */}
             <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
-            {/* Desktop Icons Area */}
-            <div className="absolute top-0 left-0 bottom-12 right-0 p-4 flex flex-col flex-wrap content-start gap-4 z-0">
+            {/* Desktop Icons Area - Responsive Grid */}
+            <div className="absolute top-0 left-0 bottom-12 right-0 p-2 sm:p-4 grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:flex lg:flex-col lg:flex-wrap lg:content-start gap-2 sm:gap-4 z-0 overflow-auto">
                 {Object.values(apps).map((app) => (
                     <button
                         key={app.id}
@@ -47,22 +47,22 @@ export const Desktop = () => {
                             icon: app.icon,
                             size: { width: app.width || 600, height: app.height || 400 }
                         })}
-                        className="group flex flex-col items-center gap-2 p-2 w-24 rounded-lg hover:bg-white/10 transition-colors cursor-pointer text-shadow"
+                        className="group flex flex-col items-center gap-1 sm:gap-2 p-1 sm:p-2 w-full lg:w-24 rounded-lg hover:bg-white/10 active:bg-white/20 transition-colors cursor-pointer text-shadow"
                     >
-                        <div className="p-3 bg-white/10 rounded-xl shadow-lg backdrop-blur-sm group-hover:bg-white/20 transition-all ring-1 ring-white/20">
-                            <div className="text-blue-400 group-hover:text-blue-300 transition-colors">
+                        <div className="p-2 sm:p-3 bg-white/10 rounded-xl shadow-lg backdrop-blur-sm group-hover:bg-white/20 transition-all ring-1 ring-white/20">
+                            <div className="text-blue-400 group-hover:text-blue-300 transition-colors [&>svg]:w-5 [&>svg]:h-5 sm:[&>svg]:w-6 sm:[&>svg]:h-6">
                                 {app.icon}
                             </div>
                         </div>
-                        <span className="text-white text-xs font-medium text-center drop-shadow-md truncate w-full px-1">
+                        <span className="text-white text-[10px] sm:text-xs font-medium text-center drop-shadow-md truncate w-full px-1">
                             {app.title}
                         </span>
                     </button>
                 ))}
             </div>
 
-            {/* Branding Footer */}
-            <div className="absolute bottom-12 right-4 z-0 text-right pointer-events-none">
+            {/* Branding Footer - hidden on mobile */}
+            <div className="absolute bottom-12 right-4 z-0 text-right pointer-events-none hidden sm:block">
                 <div className="text-white/30 text-sm font-light">
                     Designed & Built by <span className="font-medium text-white/50">Karanvir Khanna</span>
                 </div>

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { LayoutGrid, Terminal, FolderOpen, User, Briefcase, Cpu, FileText, Gamepad2, Keyboard, Box, Sparkles } from 'lucide-react';
+import { LayoutGrid, Terminal, FolderOpen, User, Briefcase, Cpu, FileText, Gamepad2, Keyboard, Box, Sparkles, Crown } from 'lucide-react';
 import { Projects } from './Projects/Projects';
 import { Experience } from './Experience/Experience';
 import { About } from './About/About';
@@ -9,8 +9,9 @@ import { BugHunt } from './Games/BugHunt';
 import { TypingRush } from './Games/TypingRush';
 import { InventoryOptimizer } from './Games/InventoryOptimizer';
 import { Welcome } from './Welcome/Welcome';
-import { Terminal as TerminalApp } from './Terminal/Terminal'; // Terminal is likely named export too
+import { Terminal as TerminalApp } from './Terminal/Terminal';
 import { Explorer } from './Explorer/Explorer';
+import { Chess } from './Chess/Chess';
 
 export interface App {
     id: string;
@@ -105,6 +106,14 @@ export const apps: Record<string, App> = {
         component: <Welcome />,
         width: 900,
         height: 700,
+    },
+    chess: {
+        id: 'chess',
+        title: 'Chess Arena',
+        icon: <Crown size={24} />,
+        component: <Chess />,
+        width: 1000,
+        height: 800,
     },
 };
 
