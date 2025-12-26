@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { useOSStore } from '../../store/useOSStore';
 import { Taskbar } from './Taskbar';
 import { Window } from './Window';
@@ -9,6 +9,20 @@ export const Desktop = () => {
     const desktopRef = useRef<HTMLDivElement>(null);
 
     // app registry is now imported from src/apps/registry.tsx
+
+    // Auto-launch Welcome app
+    useEffect(() => {
+        const hasVisited = sessionStorage.getItem('hasVisited');
+        if (!hasVisited) {
+            useOSStore.getState().launchApp('welcome', apps.welcome.component, {
+                title: apps.welcome.title,
+                icon: apps.welcome.icon,
+                size: { width: apps.welcome.width || 900, height: apps.welcome.height || 700 },
+                position: { x: window.innerWidth / 2 - 450, y: window.innerHeight / 2 - 350 }
+            });
+            sessionStorage.setItem('hasVisited', 'true');
+        }
+    }, []);
 
     return (
         <div
@@ -45,6 +59,16 @@ export const Desktop = () => {
                         </span>
                     </button>
                 ))}
+            </div>
+
+            {/* Branding Footer */}
+            <div className="absolute bottom-12 right-4 z-0 text-right pointer-events-none">
+                <div className="text-white/30 text-sm font-light">
+                    Designed & Built by <span className="font-medium text-white/50">Karanvir Khanna</span>
+                </div>
+                <div className="text-white/20 text-xs">
+                    Made with <span className="text-red-500/50">❤️</span> and React
+                </div>
             </div>
 
             {/* Windows Layer */}

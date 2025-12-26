@@ -42,10 +42,11 @@ export const getNode = (path: string): FSNode | null => {
 
     const parts = path.split('/').filter(Boolean);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let current: any = { children: initialFS };
+    let current: any = { type: 'dir', children: initialFS };
 
     for (const part of parts) {
-        if (current.type !== 'dir' || !current.children || !current.children[part]) {
+        // Check if current has children and the part exists
+        if (!current.children || !current.children[part]) {
             return null;
         }
         current = current.children[part];

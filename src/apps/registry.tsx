@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { LayoutGrid, Terminal, FolderOpen, User, Briefcase, Cpu, FileText, Gamepad2, Keyboard, Box } from 'lucide-react';
+import { LayoutGrid, Terminal, FolderOpen, User, Briefcase, Cpu, FileText, Gamepad2, Keyboard, Box, Sparkles } from 'lucide-react';
 import { Projects } from './Projects/Projects';
 import { Experience } from './Experience/Experience';
 import { About } from './About/About';
@@ -8,6 +8,7 @@ import { Resume } from './Resume/Resume';
 import { BugHunt } from './Games/BugHunt';
 import { TypingRush } from './Games/TypingRush';
 import { InventoryOptimizer } from './Games/InventoryOptimizer';
+import { Welcome } from './Welcome/Welcome';
 import { Terminal as TerminalApp } from './Terminal/Terminal'; // Terminal is likely named export too
 import { Explorer } from './Explorer/Explorer';
 
@@ -96,6 +97,14 @@ export const apps: Record<string, App> = {
         component: <InventoryOptimizer />,
         width: 800,
         height: 600,
+    },
+    welcome: {
+        id: 'welcome',
+        title: 'Welcome',
+        icon: <Sparkles size={24} />,
+        component: <Welcome />,
+        width: 900,
+        height: 700,
     },
 };
 

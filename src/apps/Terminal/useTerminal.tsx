@@ -138,22 +138,34 @@ export const useTerminal = () => {
                     break;
                 }
 
-                // Dynamic import to avoid circular dependencies if any, and keep terminal lightweight
-                import('../../apps/registry').then(({ apps }) => {
-                    const targetApp = apps[appName] || Object.values(apps).find(a => a.title.toLowerCase() === appName);
+                // Dynamic import with error handling
+                try {
+                    import('../../apps/registry').then(({ apps }) => {
+                        try {
+                            const targetApp = apps[appName] || Object.values(apps).find(a => a.title.toLowerCase() === appName);
 
-                    if (targetApp) {
-                        launchApp(targetApp.id, targetApp.component, {
-                            title: targetApp.title,
-                            icon: targetApp.icon,
-                            size: { width: targetApp.width || 600, height: targetApp.height || 400 }
-                        });
-                        addToHistory('output', `Opening ${targetApp.title}...`);
-                    } else {
-                        addToHistory('error', `App not found: ${appName}`);
-                        addToHistory('output', 'Available apps: ' + Object.keys(apps).join(', '));
-                    }
-                });
+                            if (targetApp) {
+                                launchApp(targetApp.id, targetApp.component, {
+                                    title: targetApp.title,
+                                    icon: targetApp.icon,
+                                    size: { width: targetApp.width || 600, height: targetApp.height || 400 }
+                                });
+                                addToHistory('output', `Opening ${targetApp.title}...`);
+                            } else {
+                                addToHistory('error', `App not found: ${appName}`);
+                                addToHistory('output', 'Available apps: ' + Object.keys(apps).join(', '));
+                            }
+                        } catch (err) {
+                            console.error('Failed to launch app:', err);
+                            addToHistory('error', `Error launching ${appName}: ${(err as Error).message}`);
+                        }
+                    }).catch(err => {
+                        console.error('Failed to load registry:', err);
+                        addToHistory('error', `System Error: Could not load app registry.`);
+                    });
+                } catch (err) {
+                    addToHistory('error', `Critical Error: ${(err as Error).message}`);
+                }
                 break;
             }
 

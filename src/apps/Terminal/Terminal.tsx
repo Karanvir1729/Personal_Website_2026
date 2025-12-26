@@ -44,7 +44,11 @@ export const Terminal: React.FC = () => {
     return (
         <div
             className="bg-[#1e1e2e] h-full w-full font-mono text-sm text-[#cdd6f4] p-4 flex flex-col"
-            onClick={() => inputRef.current?.focus()}
+            onClick={() => {
+                // Keep focus unless selecting text
+                if (window.getSelection()?.toString()) return;
+                inputRef.current?.focus();
+            }}
         >
             <div className="flex-1 overflow-auto space-y-1 custom-scrollbar">
                 {history.map((line) => (
