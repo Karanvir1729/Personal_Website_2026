@@ -111,6 +111,7 @@ export const BootScreen: React.FC<BootScreenProps> = ({ onComplete }) => {
                     {/* Blinking cursor */}
                     <motion.span
                         animate={{ opacity: [1, 0] }}
+                        // Creates the infinite pulsing animation effect for the loading bar.
                         transition={{ duration: 0.8, repeat: Infinity }}
                         className="inline-block w-2 h-4 bg-cyan-400 ml-1"
                     />

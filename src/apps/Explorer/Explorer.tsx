@@ -55,6 +55,7 @@ export const Explorer: React.FC = () => {
             <div className="h-12 border-b border-white/10 flex items-center px-4 gap-4 bg-white/5">
                 <button
                     onClick={goBack}
+                    // Prevents going back past the initial path in history.
                     disabled={historyIndex === 0}
                     className="p-1 hover:bg-white/10 rounded disabled:opacity-30 transition-colors"
                 >

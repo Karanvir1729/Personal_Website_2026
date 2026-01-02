@@ -6,6 +6,7 @@ import { WelcomeTour } from './components/os/WelcomeTour';
 
 const App: React.FC = () => {
   // Check if we should skip boot (e.g. development or user preference)
+  // Uses function initializer to check localStorage only once.
   const [booted, setBooted] = useState(() => {
     return localStorage.getItem('skipBoot') === 'true';
   });
@@ -26,6 +27,7 @@ const App: React.FC = () => {
   return (
     <>
       {!booted ? (
+        // Triggers the state transition from pre-boot to desktop view.
         <BootScreen onComplete={handleBootComplete} />
       ) : (
         <>

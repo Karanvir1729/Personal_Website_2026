@@ -29,6 +29,7 @@ export const resolvePath = (path: string, currentDir: string): string => {
         if (part === '..') {
             stack.pop();
         } else {
+            // Handles standard file or directory names.
             stack.push(part);
         }
     }

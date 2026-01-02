@@ -24,6 +24,7 @@ export const isDemoMode = !import.meta.env.VITE_FIREBASE_API_KEY;
 let app: ReturnType<typeof initializeApp> | null = null;
 let database: ReturnType<typeof getDatabase> | null = null;
 
+// Manages initialization errors, vital for HMR safety
 try {
     app = initializeApp(firebaseConfig);
     database = getDatabase(app);

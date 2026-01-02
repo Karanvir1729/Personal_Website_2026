@@ -88,6 +88,7 @@ export const InventoryOptimizer = () => {
         }
 
         // Remove from queue
+        // Filters out the currently selected (and successfully placed) block.
         const newQueue = queue.filter((_, i) => i !== selectedBlockIndex);
         setQueue(newQueue);
         if (newQueue.length === 0) {

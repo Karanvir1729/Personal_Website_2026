@@ -1,4 +1,3 @@
-//About file
 import React from 'react';
 import content from '../../data/content.json';
 
@@ -17,12 +16,31 @@ export const About: React.FC = () => {
                 {content.profile.headline}
             </p>
 
-            <div className="bg-white/5 rounded-xl p-6 max-w-2xl text-left border border-white/10 mt-4">
-                <p className="leading-relaxed text-white/70 mb-4">
-                    I'm a computer science student at the University of Toronto, passionate about building systems that are both robust and delightful to use.
+            <div className="bg-white/5 rounded-xl p-6 max-w-2xl text-left border border-white/10 mt-4 space-y-4">
+                <p className="leading-relaxed text-white/70">
+                    I go by <strong className="text-white">Karan</strong> and am pursuing a Computer Science Specialist with a minor in Mathematics, graduating in April 2026, with a focus on building scalable, production-grade systems.
                 </p>
                 <p className="leading-relaxed text-white/70">
-                    My background spans from <strong>optimization algorithms</strong> and <strong>data governance</strong> to creative front-end engineering. I believe in the "Builder who ships" mentality—making things that solve real problems (and sometimes just for fun, like this OS!).
+                    I spent 16 months at <strong className="text-white">IPPINKA</strong> (2024-2025), where I built and owned backend systems supporting thousands of SKUs, including a{' '}
+                    <a href="https://github.com/Karanvir1729/scip/blob/master/D__Build_PO__Technical_Documentation.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
+                        procurement optimization engine
+                    </a>{' '}
+                    using SCIP and mixed-integer optimization. I also worked at <strong className="text-white">KPMG</strong> for 4 months in 2023, developing AI and data governance prototypes.
+                </p>
+                <p className="leading-relaxed text-white/70">
+                    Outside of industry work, I've pursued research and project-based learning through hackathons and independent projects, including winning <strong className="text-white">Hack the North</strong> with{' '}
+                    <a href="https://tarazoo.shop" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
+                        tarazoo.shop
+                    </a>
+                    , releasing a{' '}
+                    <a href="https://karanvir1729.itch.io/tormented-by-lights" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
+                        24-hour game
+                    </a>
+                    , and authoring a{' '}
+                    <a href="https://github.com/Karanvir1729/MatriodResearch/blob/main/matroidReserchPaper.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
+                        research paper in matroid theory
+                    </a>
+                    .
                 </p>
             </div>
 

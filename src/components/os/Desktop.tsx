@@ -4,6 +4,7 @@ import { Taskbar } from './Taskbar';
 import { Window } from './Window';
 import { apps } from '../../apps/registry';
 import { ChessStatsWidget } from './ChessStatsWidget';
+import { ResumeWidget } from './ResumeWidget';
 import { GitHubWidget } from './GitHubWidget';
 import { LinkedInWidget } from './LinkedInWidget';
 import { DevPostWidget } from './DevPostWidget';
@@ -12,8 +13,6 @@ import { MediumWidget } from './MediumWidget';
 export const Desktop = () => {
     const { windows } = useOSStore();
     const desktopRef = useRef<HTMLDivElement>(null);
-
-    // app registry is now imported from src/apps/registry.tsx
 
     // Auto-launch Welcome app
     useEffect(() => {
@@ -66,22 +65,24 @@ export const Desktop = () => {
                 ))}
             </div>
 
-            {/* Desktop Widgets - Hidden on mobile/tablet */}
-            <div className="absolute top-6 right-6 z-0 hidden xl:flex flex-col gap-4 pointer-events-none">
-                <div className="pointer-events-auto">
-                    <MediumWidget />
+            {/* Desktop Widgets - Hidden on mobile/tablet, 3x2 grid with large tiles */}
+            <div className="absolute top-6 right-6 z-0 hidden xl:grid gap-3 pointer-events-none" style={{ gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: 'repeat(2, minmax(180px, auto))', width: '600px' }}>
+                {/* Row 1: Resume (large, spans 2 cols), GitHub */}
+                <div className="pointer-events-auto col-span-2 row-span-1" style={{ minHeight: '200px' }}>
+                    <ResumeWidget />
                 </div>
                 <div className="pointer-events-auto">
                     <GitHubWidget />
                 </div>
-                <div className="pointer-events-auto">
+
+                {/* Row 2: Chess (large, spans 2 cols), LinkedIn, DevPost, Medium stacked */}
+                <div className="pointer-events-auto col-span-2 row-span-1" style={{ minHeight: '200px' }}>
                     <ChessStatsWidget />
                 </div>
-                <div className="pointer-events-auto">
+                <div className="pointer-events-auto flex flex-col gap-3">
                     <LinkedInWidget />
-                </div>
-                <div className="pointer-events-auto">
                     <DevPostWidget />
+                    <MediumWidget />
                 </div>
             </div>
 
@@ -97,7 +98,6 @@ export const Desktop = () => {
 
             {/* Windows Layer */}
             <div className="absolute inset-0 pointer-events-none">
-                {/* Pointer events handled by windows themselves */}
                 {windows.map((win) => (
                     <div key={win.id} className="pointer-events-auto">
                         <Window window={win} />

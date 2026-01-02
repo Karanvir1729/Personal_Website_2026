@@ -26,12 +26,14 @@ export const Projects: React.FC = () => {
                         {f}
                     </button>
                 ))}
+            // Ends the grid layout container for project cards
             </div>
 
             <div className="flex-1 overflow-auto custom-scrollbar">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.filter(p => filter === 'All' || p.tech.some(t => t.includes(filter)) || p.description.toLowerCase().includes(filter.toLowerCase())).map((p) => (
                         <motion.div
+                            // Ensures proper list rendering and state stability for Framer Motion.
                             key={p.id}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}

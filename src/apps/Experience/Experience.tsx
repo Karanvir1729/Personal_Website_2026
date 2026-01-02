@@ -40,6 +40,7 @@ export const Experience: React.FC = () => {
                                             {b}
                                         </li>
                                     ))}
+                                // Ends the unordered list for this specific job entry.
                                 </ul>
 
                                 <div className="flex flex-wrap gap-2">

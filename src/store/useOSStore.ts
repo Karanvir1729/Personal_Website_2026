@@ -13,6 +13,7 @@ export interface WindowState {
     size?: { width: number; height: number };
 }
 
+// Core interface defining OS state and action methods
 interface OSState {
     windows: WindowState[];
     activeWindowId: string | null;
@@ -32,11 +33,13 @@ export const useOSStore = create<OSState>((set, get) => ({
     nextZIndex: 100,
 
     launchApp: (appId, component, options = {}) => {
+        // Access current state for launching logic.
         const { windows, nextZIndex } = get();
 
         // Check if window already exists
         const existingWindow = windows.find((w) => w.id === appId);
         if (existingWindow) {
+            // Prevents launching duplicate windows for singletons.
             get().focusWindow(appId);
             return;
         }

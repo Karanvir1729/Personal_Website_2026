@@ -30,6 +30,7 @@ export const TypingRush = () => {
     const [inputValue, setInputValue] = useState('');
     const [difficulty, setDifficulty] = useState(1);
 
+    // Ref for accessing the dimensions of the game area.
     const containerRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
     const requestRef = useRef<number>(0);

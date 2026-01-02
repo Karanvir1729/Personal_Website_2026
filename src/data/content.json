@@ -1,23 +1,26 @@
 {
     "profile": {
         "name": "Karanvir (Karan) Khanna",
-        "headline": "Builder who ships | CS @ UofT 2026",
+        "headline": "CS Specialist @ UofT | Building Scalable Systems | April 2026",
         "email": "karan.khanna@mail.utoronto.ca",
         "links": {
             "github": "https://github.com/Karanvir1729",
             "linkedin": "https://www.linkedin.com/in/karan-khanna-b7013b24b/",
-            "devpost": "https://devpost.com/prokaranvir"
+            "devpost": "https://devpost.com/prokaranvir",
+            "medium": "https://medium.com/@prokaranvir",
+            "game": "https://karanvir1729.itch.io/tormented-by-lights",
+            "tarazoo": "https://tarazoo.shop"
         }
     },
     "education": [
         {
             "school": "University of Toronto",
-            "degree": "Honours Bachelor of Science, Computer Science",
+            "degree": "Honours Bachelor of Science, Computer Science Specialist + Math Minor",
             "graduation": "Apr 2026",
             "details": [
                 "CGPA 3.7/4.0",
-                "Dean’s List",
-                "Focus: AI, Systems, Theory"
+                "Dean's List",
+                "Focus: AI, Systems, Optimization"
             ]
         }
     ],
@@ -26,37 +29,42 @@
             "id": "ippinka",
             "role": "Software Engineer Intern",
             "company": "IPPINKA",
-            "duration": "Jun 2024 – Sept 2025",
-            "description": "Led automation and potential optimization initiatives.",
+            "duration": "Jun 2024 – Sept 2025 (16 months)",
+            "description": "Built and owned backend systems supporting thousands of SKUs.",
             "bullets": [
-                "Orchestrated purchasing operational (PO) optimization system using Python and linear solvers.",
-                "Implemented forecasting models to predict inventory needs.",
-                "Deployed infrastructure for automated scraping and data pipelines.",
-                "Mentored junior interns and led code reviews."
+                "Built procurement optimization engine using SCIP and mixed-integer programming.",
+                "Developed forecasting models (XGBoost, ARIMA) to predict inventory demand.",
+                "Deployed automated scraping pipelines and data infrastructure on AWS.",
+                "Reduced restock decision time from hours to minutes."
             ],
             "tech": [
                 "Python",
-                "Pandas",
+                "SCIP",
+                "XGBoost",
                 "AWS",
+                "MongoDB",
                 "Linear Programming"
-            ]
+            ],
+            "links": {
+                "docs": "https://github.com/Karanvir1729/scip/blob/master/D__Build_PO__Technical_Documentation.pdf"
+            }
         },
         {
             "id": "kpmg",
             "role": "Software Engineer Intern",
             "company": "KPMG",
-            "duration": "May – Oct 2023",
-            "description": "Built AI assistants and governance tools.",
+            "duration": "May – Oct 2023 (4 months)",
+            "description": "Built AI assistants and governance prototypes.",
             "bullets": [
-                "Developed AI assistants for internal audit workflows.",
+                "Developed AI assistants for internal audit workflows using LLMs.",
                 "Built governance pipelines to ensure compliance with AI safety standards.",
                 "Evaluated vendor tools and created adoption playbooks."
             ],
             "tech": [
-                "AI/ML",
                 "Python",
                 "Azure",
-                "Governance"
+                "LLMs",
+                "Data Governance"
             ]
         }
     ],
@@ -64,84 +72,195 @@
         {
             "id": "tarazoo",
             "title": "Tarazoo",
-            "description": "HTN 2025 Winner. A project focusing on optimizing something (details inferred).",
+            "description": "Hack the North 2025 Winner. Real-time e-commerce platform with AI recommendations.",
             "tech": [
                 "React",
-                "Python"
+                "Python",
+                "AI/ML"
             ],
             "links": {
-                "demo": "",
+                "demo": "https://tarazoo.shop",
                 "repo": ""
+            },
+            "highlight": "🏆 HTN Winner"
+        },
+        {
+            "id": "scip-optimization",
+            "title": "SCIP Procurement Engine",
+            "description": "Mixed-integer optimization system for automated purchasing decisions at scale.",
+            "tech": [
+                "Python",
+                "SCIP",
+                "Linear Programming",
+                "MongoDB"
+            ],
+            "links": {
+                "docs": "https://github.com/Karanvir1729/scip/blob/master/D__Build_PO__Technical_Documentation.pdf",
+                "repo": "https://github.com/Karanvir1729/scip"
             }
         },
         {
-            "id": "auto-po",
-            "title": "Automated PO System",
-            "description": "Automated purchasing decisions based on forecast demand.",
+            "id": "code-translator",
+            "title": "Python-to-Java Translator",
+            "description": "ML-based code translator using fine-tuned transformer models.",
             "tech": [
                 "Python",
-                "Optimization"
+                "PyTorch",
+                "Transformers",
+                "NLP"
             ],
-            "links": {}
+            "links": {
+                "repo": "https://github.com/Karanvir1729/Python-to-Java-Code-Translator"
+            }
         },
         {
             "id": "lights",
             "title": "Tormented by Lights",
-            "description": "Game Jam 2025 Winner. A horror/puzzle game.",
+            "description": "24-hour game jam horror/puzzle game built in Unity.",
             "tech": [
                 "Unity",
-                "C#"
+                "C#",
+                "Game Design"
             ],
-            "links": {}
-        },
-        {
-            "id": "definition-finder",
-            "title": "Definition Finder",
-            "description": "DeerHacks 2022 Winner. Tool to quickly find definitions in complex texts.",
-            "tech": [
-                "NLP",
-                "Python"
-            ],
-            "links": {}
+            "links": {
+                "demo": "https://karanvir1729.itch.io/tormented-by-lights"
+            },
+            "highlight": "🎮 24hr Game"
         },
         {
             "id": "matroid",
             "title": "Matroid Theory Research",
-            "description": "Research paper on Matroid Theory produced during undergraduate studies.",
+            "description": "Undergraduate research paper on matroid enumeration and volume estimation of polytopes.",
             "tech": [
-                "Math",
-                "LaTeX"
+                "Mathematics",
+                "SageMath",
+                "LaTeX",
+                "Research"
             ],
-            "links": {}
+            "links": {
+                "paper": "https://github.com/Karanvir1729/MatriodResearch/blob/main/matroidReserchPaper.pdf",
+                "repo": "https://github.com/Karanvir1729/MatriodResearch"
+            },
+            "highlight": "📄 Research Paper"
+        },
+        {
+            "id": "courtroom",
+            "title": "CourtRoom",
+            "description": "AI-powered legal document analysis and case management system.",
+            "tech": [
+                "Python",
+                "AI/ML",
+                "NLP"
+            ],
+            "links": {
+                "repo": "https://github.com/Karanvir1729/CourtRoom"
+            }
+        },
+        {
+            "id": "guardian-cruise",
+            "title": "GuardianCruise",
+            "description": "Autonomous vehicle safety monitoring dashboard.",
+            "tech": [
+                "Python",
+                "Computer Vision",
+                "Dashboard"
+            ],
+            "links": {
+                "repo": "https://github.com/Karanvir1729/GuardianCruise"
+            }
+        },
+        {
+            "id": "jobs-scraper",
+            "title": "Jobs Scraper",
+            "description": "Automated business info scraper for home services leads.",
+            "tech": [
+                "Python",
+                "Web Scraping",
+                "Automation"
+            ],
+            "links": {
+                "repo": "https://github.com/Karanvir1729/JobsScraper"
+            }
         }
     ],
     "skills": {
         "languages": [
             "Python",
-            "TypeScript",
             "Java",
-            "C++",
-            "SQL"
+            "C/C++",
+            "JavaScript",
+            "TypeScript",
+            "SQL",
+            "Bash",
+            "PHP",
+            "Assembly (x86)",
+            "LaTeX"
         ],
         "frameworks": [
             "React",
-            "Next.js",
             "Node.js",
+            "Flask",
+            "Django",
+            "Next.js",
+            "Express",
             "Tailwind CSS",
             "Framer Motion"
         ],
+        "ml_and_data": [
+            "TensorFlow",
+            "PyTorch",
+            "scikit-learn",
+            "XGBoost",
+            "pandas",
+            "NumPy",
+            "Transformers",
+            "OpenCV",
+            "ChatGPT API"
+        ],
+        "optimization": [
+            "SCIP",
+            "CPLEX",
+            "Pyomo",
+            "MINLP",
+            "Linear Programming",
+            "Nonlinear Solvers",
+            "Demand Forecasting"
+        ],
+        "cloud_and_infra": [
+            "AWS",
+            "Azure",
+            "GCP",
+            "DigitalOcean",
+            "Docker",
+            "MongoDB",
+            "NGINX",
+            "Cloudflare",
+            "Ubuntu"
+        ],
+        "data_governance": [
+            "CDMP Certified",
+            "Microsoft Purview",
+            "Informatica",
+            "Collibra",
+            "Data Lineage",
+            "Data Cataloging"
+        ],
+        "security": [
+            "SQLmap",
+            "Ghidra",
+            "Burp Suite",
+            "Wireshark",
+            "WPScan"
+        ],
         "tools": [
             "Git",
-            "Docker",
-            "AWS",
-            "Linux",
-            "Vim"
-        ],
-        "concepts": [
-            "Optimization",
-            "Data Governance",
-            "System Design",
-            "Machine Learning"
+            "GitHub Actions",
+            "CI/CD",
+            "Selenium",
+            "JUnit",
+            "UiPath (RPA)",
+            "Vim",
+            "REST APIs"
         ]
     },
     "filesystem": {
@@ -153,7 +272,7 @@
                     "children": {
                         "about.txt": {
                             "type": "file",
-                            "content": "Hi, I'm Karan. I build systems that work."
+                            "content": "Hi, I'm Karan. I build scalable, production-grade systems."
                         },
                         "experience": {
                             "type": "dir",

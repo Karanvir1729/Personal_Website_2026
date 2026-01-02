@@ -29,8 +29,8 @@ export const Welcome = () => {
                         Welcome to KaranOS
                     </h1>
                     <p className="text-xl text-slate-300 leading-relaxed">
-                        Hi, I'm <span className="font-semibold text-white">Karanvir Khanna</span>.
-                        This isn't just a website—it's an interactive operating system designed to showcase my work.
+                        Hi, I'm <span className="font-semibold text-white">Karan</span>—a CS Specialist at UofT (graduating April 2026) focused on building scalable, production-grade systems.
+                        I've shipped backend systems at IPPINKA, built AI prototypes at KPMG, and won Hack the North.
                     </p>
                 </div>
 
