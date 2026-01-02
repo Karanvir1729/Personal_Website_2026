@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { LayoutGrid, Terminal, FolderOpen, User, Briefcase, Cpu, FileText, Gamepad2, Keyboard, Box, Sparkles } from 'lucide-react';
 import { Projects } from './Projects/Projects';
 import { Experience } from './Experience/Experience';
