@@ -1,0 +1,222 @@
+%-------------------------
+% ML-Focused Resume in LaTeX
+% Author: Karanvir (Karan) Khanna
+% Two-page ML/AI focused resume
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+
+% Two-page margins (slightly less compact)
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\pdfgentounicode=1
+
+%---------- Custom commands ----------
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textbf{\small#3} & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%---------- HEADING ----------
+\begin{center}
+    \textbf{\Huge \scshape Karanvir (Karan) Khanna} \\ \vspace{2pt}
+    \small \textbf{Machine Learning Engineer · AI Researcher · E-Commerce Developer } \\ \vspace{4pt}
+    \small 416-347-3761 $|$
+    \href{mailto:karanvir.khanna@mail.utoronto.ca}{\underline{karanvir.khanna@mail.utoronto.ca}} $|$
+    \href{https://bit.ly/karan2026}{\underline{Personal Website}} $|$
+    \href{https://github.com/Karanvir1729}{\underline{GitHub}} $|$
+    \href{https://linkedin.com/in/karan-khanna-b7013b24b}{\underline{LinkedIn}}
+\end{center}
+
+%---------- SUMMARY ----------
+\section{Summary}
+\small{\textbf{Hack the North Winner (2025)} and ML Engineer with details-oriented experience in \textbf{Transformer fine-tuning}, \textbf{LLM applications}, and \textbf{mathematical optimization}. Built production AI systems including demand forecasting platforms and multi-agent AI systems using Google Cloud Platform (BigQuery, Pub/Sub). Strong foundation in deep learning (PyTorch), NLP, and operations research from University of Toronto CS program.}
+
+%----------- EDUCATION -----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Toronto}{Apr. 2026}
+      {Honours Bachelor of Science in Computer Science}{CGPA: 3.7/4.0 · Dean's List}
+    \resumeItemListStart
+      \resumeItem{\textbf{ML/AI Coursework:} Neural Networks \& Deep Learning (CSC413), Fundamentals of Machine Learning (CSC311), Algorithm Design \& Analysis, Linear Algebra, Probability \& Statistics, Numerical Methods}
+      \resumeItem{\textbf{Additional:} Software Engineering, Operating Systems, Data Structures, Information Security}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------- TECHNICAL SKILLS -----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item \small{
+    \textbf{Machine Learning:} PyTorch, TensorFlow, Hugging Face Transformers, scikit-learn, XGBoost, LightGBM \\
+    \textbf{Deep Learning:} Transformers (CodeT5, BERT, RoBERTa), RNN/LSTM, CNNs, Autoencoders, VAEs \\
+    \textbf{NLP \& LLMs:} OpenAI API, Google Gemini (1.5 Pro/Flash), Cohere, LangChain, BLEU/CodeBLEU, Semantic Analysis \\
+    \textbf{Mathematical Optimization:} SCIP, CPLEX, Pyomo, Gurobi, MIP, MINLP, constraint programming \\
+    \textbf{Languages:} Python, C/C++, Java, TypeScript, SQL, NoSQL, GDScript (Godot), Bash \\
+    \textbf{Infrastructure:} Docker, Google Cloud Platform (BigQuery, Pub/Sub), AWS, Azure, CUDA, FastAPI \\
+    \textbf{MLOps \& Tools:} Git, GitHub Actions, CI/CD, Auth0, SAP Integration, Moneris, OMS/WMS systems
+  }
+\end{itemize}
+
+%----------- EXPERIENCE -----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Machine Learning Engineer}{Jun. 2024 -- Sept. 2025}
+      {IPPINKA}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Developed \textbf{demand forecasting models} using time-series analysis on 10+ years of sales data for 5,000+ SKUs, improving inventory turnover and reducing stockouts by 23\%.}
+        \resumeItem{Engineered \textbf{OMS/WMS integration pipelines} connecting internal systems with \textbf{SAP} and \textbf{Moneris} for real-time inventory and payment processing.}
+        \resumeItem{Implemented \textbf{smart product search} using NLP and semantic understanding to improve query relevance and conversion rates.}
+        \resumeItem{Built \textbf{customer loyalty points system} and integrated \textbf{Auth0} for secure, unified user account management across platforms.}
+        \resumeItem{Built \textbf{MINLP-based procurement optimization} system using \textbf{SCIP/CPLEX} to generate optimal purchase orders with multi-constraint satisfaction.}
+        \resumeItem{Deployed distributed data pipelines on \textbf{GCP} using \textbf{BigQuery} for analytics and \textbf{Pub/Sub} for event-driven processing, reducing latency by 35\%.}
+        \resumeItem{Mentored developers on ML best practices and authored technical documentation on system architectures.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {AI/ML Engineer – Data Governance}{May 2023 -- Oct. 2023}
+      {KPMG LLP}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Developed \textbf{LLM-powered AI assistants} using ChatGPT API to automate data governance workflows, reducing manual compliance review time by 60\%.}
+        \resumeItem{Built \textbf{ML classification models} for automated data discovery and PII detection across enterprise data lakes using NLP and pattern matching.}
+        \resumeItem{Implemented \textbf{ML-based data quality scoring} algorithms using statistical profiling to identify data anomalies and lineage issues.}
+        \resumeItem{Created \textbf{similarity matching pipelines} for Master Data Management (MDM) using fuzzy matching, Levenshtein distance, and embedding-based deduplication.}
+        \resumeItem{Designed \textbf{AWS/Azure ML architectures} for scalable data governance; evaluated Informatica, Purview, and Collibra ML capabilities.}
+        \resumeItem{Authored KPMG's Data Governance Playbook with ML-enhanced automation strategies; presented to 50+ enterprise clients.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%----------- ML PROJECTS -----------
+\section{Machine Learning Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading{\textbf{Tarazoo (Hack the North Winner)} \href{https://github.com/ishan-singh-3005/tarazoo}{\underline{[Repo]}} $|$ \emph{FastAPI, PyTorch, SCIP}}{2025-2026}
+      \resumeItemListStart
+        \resumeItem{Co-built \textbf{AI-powered SaaS platform} for e-commerce inventory optimization—live at \href{https://www.tarazoo.shop}{\underline{tarazoo.shop}}.}
+        \resumeItem{Implemented \textbf{demand forecasting} using time-series models (ARIMA, Prophet) and \textbf{constraint-based PO generation} with SCIP.}
+        \resumeItem{Integrated \textbf{NLP review insights} for automated product sentiment analysis using transformer embeddings.}
+        \resumeItem{Detailed full-stack integration with Shopify ecosystem, enabling seamless inventory syncing and analytics.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading{\textbf{Python-to-Java Code Translator} \href{https://github.com/Karanvir1729/Python-to-Java-Code-Translator}{\underline{[Repo]}} $|$ \emph{PyTorch, Hugging Face, CodeT5}}{2025}
+      \resumeItemListStart
+        \resumeItem{Fine-tuned \textbf{CodeT5 transformer model} on custom Python→Java code pairs dataset for neural code translation.}
+        \resumeItem{Implemented training pipeline with GPU acceleration (CUDA), achieving 78\% compilation rate on translated code.}
+        \resumeItem{Evaluated using \textbf{BLEU and CodeBLEU metrics}; documented full ML pipeline from tokenization to inference.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading{\textbf{AI Code Documentation Agent} $|$ \emph{Google Gemini 1.5, Python, AST}}{2025}
+      \resumeItemListStart
+        \resumeItem{Built an \textbf{autonomous documentation agent} using \textbf{Gemini 1.5 Flash} to recursively scan and document large codebases.}
+        \resumeItem{Implemented context-aware code chunking to optimize token usage while maintaining semantic understanding across files.}
+        \resumeItem{Integrated into CI/CD pipelines to automatically generate and update \texttt{Documentation.md}, reducing technical debt.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading{\textbf{GuardianCruise – Driver Safety AI} \href{https://github.com/Karanvir1729/GuardianCruise}{\underline{[Repo]}} $|$ \emph{OpenCV, Python, Cohere}}{2024}
+      \resumeItemListStart
+        \resumeItem{Built \textbf{real-time computer vision system} using OpenCV for facial analysis: eye tracking, yawn detection, distraction recognition.}
+        \resumeItem{Trained \textbf{ML classifier} to detect mood changes and impairment; integrated \textbf{Cohere LLM} for intelligent driver alerts.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading{\textbf{ML Boilerplates Library} \href{https://github.com/Karanvir1729/ML_boilerPlates}{\underline{[Repo]}} $|$ \emph{PyTorch, scikit-learn}}{2025}
+      \resumeItemListStart
+        \resumeItem{Created comprehensive \textbf{24+ model boilerplate repository} covering supervised, unsupervised, and embedding techniques.}
+        \resumeItem{Authored technical guides and decision trees for rapid ML prototyping and model selection.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading{\textbf{Tormented by Lights – Adaptive AI Game} \href{https://karanvir1729.itch.io/tormented-by-lights}{\underline{[Game]}} $|$ \emph{Godot}}{2024}
+      \resumeItemListStart
+        \resumeItem{Built \textbf{Game Jam winner} featuring adaptive difficulty ML that adjusts challenge based on player performance.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%----------- RESEARCH -----------
+\section{Research Experience}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading{\textbf{Matroid Theory \& Polytope Optimization Research} \href{https://github.com/Karanvir1729/MatriodResearch}{\underline{[Repo]}} $|$ \emph{University of Toronto}}{May 2023 -- Sep. 2023}
+      \resumeItemListStart
+        \resumeItem{Conducted research on \textbf{volume estimation of matroid polytopes} under Prof. Ahmed Ashraf using combinatorial geometry.}
+        \resumeItem{Applied \textbf{Hepp bounds} for continuously bounding polytope volumes; validated conjectures in SageMath.}
+        \resumeItem{Published research paper on polytope duality and symbolic computation methods. \href{https://github.com/Karanvir1729/MatriodResearch/blob/main/matroidReserchPaper.pdf}{\underline{[Paper]}}}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------- PUBLICATIONS & TALKS -----------
+\section{Technical Writing & Documentation}
+  \resumeSubHeadingListStart
+    \resumeItem{\textbf{KPMG Data Governance Playbook} — Authored enterprise ML-enhanced automation strategies for data governance.}
+    \resumeItem{\textbf{Solver Orchestration Documentation} — Technical guide on SCIP/CPLEX integration for procurement optimization.}
+    \resumeItem{\textbf{ML Model Selection Guide} — 14KB decision tree for choosing ML algorithms based on data characteristics.}
+    \resumeItem{\textbf{Theory Summary} — 20KB ML theory reference covering training algorithms, loss functions, and model selection.}
+  \resumeSubHeadingListEnd
+
+%----------- CERTIFICATIONS & AWARDS -----------
+\section{Certifications & Awards}
+  \resumeSubHeadingListStart
+    \resumeItem{\textbf{Hack the North Winner (2025)} — Shopify Challenge: AI Shopping with Computer Vision \& Optimization.}
+    \resumeItem{\textbf{DeerHacks Winner (2022)} — Best Usage of UiPath: Created NLP-powered Essay Generator.}
+    \resumeItem{\textbf{Halton Game Jam Winner (2025)} — Adaptive difficulty game AI in 24-hour build.}
+    \resumeItem{\textbf{UofT Hacks Runner-up (2023)} · \textbf{DAMA Certified Data Management Professional (CDMP)}}
+  \resumeSubHeadingListEnd
+
+%----------- ADDITIONAL -----------
+\section{Additional}
+  \resumeSubHeadingListStart
+    \resumeItem{\textbf{Open Source:} Active contributor to ML tooling; SCIP solver fork with custom extensions.}
+    \resumeItem{\textbf{Interests:} Reinforcement learning, LLM agents, operations research, game AI, multi-modal learning.}
+  \resumeSubHeadingListEnd
+
+\end{document}

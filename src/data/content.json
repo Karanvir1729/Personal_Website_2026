@@ -2,7 +2,7 @@
     "profile": {
         "name": "Karanvir (Karan) Khanna",
         "headline": "CS Specialist @ UofT | Building Scalable Systems | April 2026",
-        "email": "karan.khanna@mail.utoronto.ca",
+        "email": "karanvir.khanna@mail.utoronto.ca",
         "links": {
             "github": "https://github.com/Karanvir1729",
             "linkedin": "https://www.linkedin.com/in/karan-khanna-b7013b24b/",
@@ -288,7 +288,7 @@
                         },
                         "contact.vcf": {
                             "type": "file",
-                            "content": "Karanvir Khanna\nkaran.khanna@mail.utoronto.ca"
+                            "content": "Karanvir Khanna\nkaranvir.khanna@mail.utoronto.ca"
                         }
                     }
                 }
