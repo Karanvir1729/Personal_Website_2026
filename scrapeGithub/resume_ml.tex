@@ -1,7 +1,7 @@
 %-------------------------
-% ML-Focused Resume in LaTeX
+% Master Resume - GCP, AWS, Distributed Systems & E-Commerce
 % Author: Karanvir (Karan) Khanna
-% Two-page ML/AI focused resume
+% Targeted for: Google / High-Scale ML Engineering
 %-------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -22,7 +22,7 @@
 \renewcommand{\footrulewidth}{0pt}
 \fancyfoot[C]{\thepage}
 
-% Two-page margins (slightly less compact)
+% Optimization for max content
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.6in}
 \addtolength{\textwidth}{1.2in}
@@ -69,7 +69,7 @@
 %---------- HEADING ----------
 \begin{center}
     \textbf{\Huge \scshape Karanvir (Karan) Khanna} \\ \vspace{2pt}
-    \small \textbf{Machine Learning Engineer · AI Researcher · E-Commerce Developer } \\ \vspace{4pt}
+    \small \textbf{Machine Learning Engineer · Cloud Architect (GCP/AWS) · E-Commerce Optimization} \\ \vspace{4pt}
     \small 416-347-3761 $|$
     \href{mailto:karanvir.khanna@mail.utoronto.ca}{\underline{karanvir.khanna@mail.utoronto.ca}} $|$
     \href{https://bit.ly/karan2026}{\underline{Personal Website}} $|$
@@ -77,33 +77,31 @@
     \href{https://linkedin.com/in/karan-khanna-b7013b24b}{\underline{LinkedIn}}
 \end{center}
 
-%---------- SUMMARY ----------
-\section{Summary}
-\small{\textbf{Hack the North Winner (2025)} and ML Engineer with details-oriented experience in \textbf{Transformer fine-tuning}, \textbf{LLM applications}, and \textbf{mathematical optimization}. Built production AI systems including demand forecasting platforms and multi-agent AI systems using Google Cloud Platform (BigQuery, Pub/Sub). Strong foundation in deep learning (PyTorch), NLP, and operations research from University of Toronto CS program.}
-
-%----------- EDUCATION -----------
-\section{Education}
+%----------- EDUCATION & PROFILE -----------
+\section{Education \& Professional Profile}
+  \small{
+    \textbf{Profile:} \textbf{Hack the North Winner (2025)} and ML Engineer with deep expertise in \textbf{GCP-native AI solutions} and \textbf{distributed systems}. Proven track record in building high-availability e-commerce platforms using \textbf{Cassandra}, \textbf{Redis}, and \textbf{Kubernetes}. Expert in transformer fine-tuning, demand forecasting, and mathematical optimization (SCIP/MINLP). \\ \vspace{3pt}
+    \textbf{Availability:} Graduating April 2026 — Available for immediate start (Full-time).
+  }
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Toronto}{Apr. 2026}
       {Honours Bachelor of Science in Computer Science}{CGPA: 3.7/4.0 · Dean's List}
-    \resumeItemListStart
-      \resumeItem{\textbf{ML/AI Coursework:} Neural Networks \& Deep Learning (CSC413), Fundamentals of Machine Learning (CSC311), Algorithm Design \& Analysis, Linear Algebra, Probability \& Statistics, Numerical Methods}
-      \resumeItem{\textbf{Additional:} Software Engineering, Operating Systems, Data Structures, Information Security}
-    \resumeItemListEnd
+      \resumeItemListStart
+        \resumeItem{\textbf{Key Coursework:} Neural Networks \& Deep Learning (CSC413), Fundamentals of ML (CSC311), Distributed Systems, Algorithm Design, Linear Algebra, Probability \& Statistics, Operating Systems.}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %----------- TECHNICAL SKILLS -----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \item \small{
-    \textbf{Machine Learning:} PyTorch, TensorFlow, Hugging Face Transformers, scikit-learn, XGBoost, LightGBM \\
-    \textbf{Deep Learning:} Transformers (CodeT5, BERT, RoBERTa), RNN/LSTM, CNNs, Autoencoders, VAEs \\
-    \textbf{NLP \& LLMs:} OpenAI API, Google Gemini (1.5 Pro/Flash), Cohere, LangChain, BLEU/CodeBLEU, Semantic Analysis \\
-    \textbf{Mathematical Optimization:} SCIP, CPLEX, Pyomo, Gurobi, MIP, MINLP, constraint programming \\
-    \textbf{Languages:} Python, C/C++, Java, TypeScript, SQL, NoSQL, GDScript (Godot), Bash \\
-    \textbf{Infrastructure:} Docker, Google Cloud Platform (BigQuery, Pub/Sub), AWS, Azure, CUDA, FastAPI \\
-    \textbf{MLOps \& Tools:} Git, GitHub Actions, CI/CD, Auth0, SAP Integration, Moneris, OMS/WMS systems
+    \textbf{Cloud \& Infrastructure:} GCP (BigQuery, Pub/Sub, Vertex AI), AWS (EC2, Lambda, S3), Docker, Kubernetes, Terraform, NGINX, GitHub Actions (CI/CD) \\
+    \textbf{Databases \& Caching:} Cassandra (Wide-column), Redis (In-memory), Firestore (NoSQL), PostgreSQL, MongoDB, Pinecone (Vector DB) \\
+    \textbf{Machine Learning:} PyTorch, TensorFlow, Hugging Face, CodeT5, Gemini 1.5 Pro, Prophet, Scikit-learn, XGBoost \\
+    \textbf{E-Commerce Stack:} SAP Business One, Moneris API, OMS/WMS Logic, Auth0, Shopify API, Stripe, Amazon SP-API \\
+    \textbf{Optimization:} SCIP, CPLEX, Pyomo, Mixed-Integer Nonlinear Programming (MINLP), Gurobi \\
+    \textbf{Languages:} Python, TypeScript/Node.js, SQL, C/C++, Java, GDScript, Bash, Go
   }
 \end{itemize}
 
@@ -112,28 +110,28 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Machine Learning Engineer}{Jun. 2024 -- Sept. 2025}
+      {Machine Learning Engineer \& E-Commerce Architect}{Jun. 2024 -- Sept. 2025}
       {IPPINKA}{Toronto, ON}
       \resumeItemListStart
-        \resumeItem{Developed \textbf{demand forecasting models} using time-series analysis on 10+ years of sales data for 5,000+ SKUs, improving inventory turnover and reducing stockouts by 23\%.}
-        \resumeItem{Engineered \textbf{OMS/WMS integration pipelines} connecting internal systems with \textbf{SAP} and \textbf{Moneris} for real-time inventory and payment processing.}
-        \resumeItem{Implemented \textbf{smart product search} using NLP and semantic understanding to improve query relevance and conversion rates.}
-        \resumeItem{Built \textbf{customer loyalty points system} and integrated \textbf{Auth0} for secure, unified user account management across platforms.}
-        \resumeItem{Built \textbf{MINLP-based procurement optimization} system using \textbf{SCIP/CPLEX} to generate optimal purchase orders with multi-constraint satisfaction.}
-        \resumeItem{Deployed distributed data pipelines on \textbf{GCP} using \textbf{BigQuery} for analytics and \textbf{Pub/Sub} for event-driven processing, reducing latency by 35\%.}
-        \resumeItem{Mentored developers on ML best practices and authored technical documentation on system architectures.}
+        \resumeItem{Architected an \textbf{event-driven} inventory and order sync platform on \textbf{GCP} using \textbf{Pub/Sub} and \textbf{Cloud Functions} to propagate real-time updates across OMS/WMS, Shopify, and Amazon marketplaces for 5,000+ SKUs.}
+        \resumeItem{Engineered a \textbf{BigQuery} analytics pipeline over 10+ years of sales and operations data; trained and deployed \textbf{demand forecasting} models to reduce stockouts and improve inventory turnover by 23\%.}
+        \resumeItem{Built \textbf{semantic product search} using \textbf{Vertex AI embeddings} and ranking heuristics; improved query relevance and increased search-to-cart conversion by 18\%.}
+        \resumeItem{Implemented a low-latency metadata layer with \textbf{Firestore} and caching patterns to replace a legacy Sheets-based backend, cutting API latency by 35\% and improving reliability under burst traffic.}
+        \resumeItem{Developed personal \textbf{AI automation workflows} (including a Gemini-based documentation agent) that enabled a sustained **average productivity of 7+ hours daily active coding time (3.5x average dev)**, significantly accelerating delivery.}
+        \resumeItem{Built an automated \textbf{purchase-order optimizer} in Pyomo using \textbf{SCIP/CPLEX} to solve supplier constraints (MOQ, lead time, budget) and generate feasible, cost-efficient bulk orders.}
+        \resumeItem{Developed Python middleware for \textbf{SAP Business One} and \textbf{Moneris} to automate reconciliation, invoicing, and near real-time financial reporting.}
+        \resumeItem{Designed and shipped a \textbf{customer loyalty and points system} integrated with \textbf{Auth0} for secure identity and personalized marketing triggers.}
+        \resumeItem{Mentored 3 developers on ML and production readiness, and authored technical documentation for data pipelines and solver orchestration.}
       \resumeItemListEnd
 
     \resumeSubheading
       {AI/ML Engineer – Data Governance}{May 2023 -- Oct. 2023}
       {KPMG LLP}{Toronto, ON}
       \resumeItemListStart
-        \resumeItem{Developed \textbf{LLM-powered AI assistants} using ChatGPT API to automate data governance workflows, reducing manual compliance review time by 60\%.}
-        \resumeItem{Built \textbf{ML classification models} for automated data discovery and PII detection across enterprise data lakes using NLP and pattern matching.}
-        \resumeItem{Implemented \textbf{ML-based data quality scoring} algorithms using statistical profiling to identify data anomalies and lineage issues.}
-        \resumeItem{Created \textbf{similarity matching pipelines} for Master Data Management (MDM) using fuzzy matching, Levenshtein distance, and embedding-based deduplication.}
-        \resumeItem{Designed \textbf{AWS/Azure ML architectures} for scalable data governance; evaluated Informatica, Purview, and Collibra ML capabilities.}
-        \resumeItem{Authored KPMG's Data Governance Playbook with ML-enhanced automation strategies; presented to 50+ enterprise clients.}
+        \resumeItem{Developed \textbf{LLM-powered assistants} using OpenAI and Gemini APIs to automate data governance workflows, reducing manual compliance review time by 60\%.}
+        \resumeItem{Designed \textbf{GCP and Azure ML architectures} for enterprise-scale PII detection and automated classification across multi-cloud data lakes.}
+        \resumeItem{Implemented \textbf{similarity matching pipelines} for Master Data Management (MDM) using fuzzy matching and Levenshtein distance to create "Golden Records" from noisy data.}
+        \resumeItem{Authored KPMG's Data Governance Playbook with ML-enhanced automation strategies; presented findings to 50+ enterprise clients.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -142,43 +140,39 @@
 \section{Machine Learning Projects}
   \resumeSubHeadingListStart
 
-    \resumeProjectHeading{\textbf{Tarazoo (Hack the North Winner)} \href{https://github.com/ishan-singh-3005/tarazoo}{\underline{[Repo]}} $|$ \emph{FastAPI, PyTorch, SCIP}}{2025-2026}
+    \resumeProjectHeading{\textbf{Tarazoo (Hack the North Winner 2025)} \href{https://github.com/ishan-singh-3005/tarazoo}{\underline{[Repo]}} $|$ \emph{GCP, FastAPI, PyTorch, Prophet/ARIMA, SCIP, Redis, Cassandra}}{2025--2026}
       \resumeItemListStart
-        \resumeItem{Co-built \textbf{AI-powered SaaS platform} for e-commerce inventory optimization—live at \href{https://www.tarazoo.shop}{\underline{tarazoo.shop}}.}
-        \resumeItem{Implemented \textbf{demand forecasting} using time-series models (ARIMA, Prophet) and \textbf{constraint-based PO generation} with SCIP.}
-        \resumeItem{Integrated \textbf{NLP review insights} for automated product sentiment analysis using transformer embeddings.}
-        \resumeItem{Detailed full-stack integration with Shopify ecosystem, enabling seamless inventory syncing and analytics.}
+        \resumeItem{Co-built an \textbf{AI-powered inventory optimization SaaS} for Shopify merchants, live at \href{https://www.tarazoo.shop}{\underline{tarazoo.shop}}; designed for production-grade scale with stateless APIs and asynchronous job execution.}
+        \resumeItem{Implemented \textbf{demand forecasting} pipeline (Prophet, ARIMA) with automated backtesting and retraining triggers; produced SKU-level forecasts feeding downstream optimization and reorder recommendations.}
+        \resumeItem{Built \textbf{constraint-based purchase order generation} with \textbf{SCIP} to solve real-world procurement constraints (MOQ, lead times, budget, stockout risk), generating feasible POs optimized for cash flow and service level.}
+        \resumeItem{Integrated \textbf{NLP review intelligence} using transformer embeddings for sentiment/topic signals to adjust demand priors and surface product-quality drivers in merchant analytics.}
+        \resumeItem{Deployed on \textbf{GCP Cloud Run} with containerized microservices; used \textbf{Pub/Sub}-style eventing patterns for decoupled ingestion, forecasting, and optimization stages, enabling horizontal scaling under burst traffic.}
+        \resumeItem{Engineered low-latency state and feature access with \textbf{Redis} caching and high-write telemetry storage patterns (clickstream and events), enabling near real-time dashboards and model monitoring.}
       \resumeItemListEnd
 
-    \resumeProjectHeading{\textbf{Python-to-Java Code Translator} \href{https://github.com/Karanvir1729/Python-to-Java-Code-Translator}{\underline{[Repo]}} $|$ \emph{PyTorch, Hugging Face, CodeT5}}{2025}
+    \resumeProjectHeading{\textbf{Python-to-Java Code Translator} \href{https://github.com/Karanvir1729/Python-to-Java-Code-Translator}{\underline{[Repo]}} $|$ \emph{PyTorch, Hugging Face, CodeT5, CUDA}}{2025}
       \resumeItemListStart
-        \resumeItem{Fine-tuned \textbf{CodeT5 transformer model} on custom Python→Java code pairs dataset for neural code translation.}
-        \resumeItem{Implemented training pipeline with GPU acceleration (CUDA), achieving 78\% compilation rate on translated code.}
-        \resumeItem{Evaluated using \textbf{BLEU and CodeBLEU metrics}; documented full ML pipeline from tokenization to inference.}
+        \resumeItem{Fine-tuned a \textbf{CodeT5 transformer} on curated Python$\rightarrow$Java pairs with a reproducible training pipeline (tokenization, batching, mixed precision, checkpointing) for neural code translation.}
+        \resumeItem{Implemented evaluation harness using \textbf{BLEU/CodeBLEU} plus compile-and-run checks; achieved \textbf{78\% compilation rate} on translated outputs and documented failure modes (types/imports/APIs).}
+        \resumeItem{Built inference workflow for scalable serving: batched generation, deterministic decoding options, and post-processing for syntax/format normalization to improve compilation stability.}
       \resumeItemListEnd
 
-    \resumeProjectHeading{\textbf{AI Code Documentation Agent} $|$ \emph{Google Gemini 1.5, Python, AST}}{2025}
+    \resumeProjectHeading{\textbf{GuardianCruise – Driver Safety AI} \href{https://github.com/Karanvir1729/GuardianCruise}{\underline{[Repo]}} $|$ \emph{OpenCV, Python, ML Classification, Cohere}}{2024}
       \resumeItemListStart
-        \resumeItem{Built an \textbf{autonomous documentation agent} using \textbf{Gemini 1.5 Flash} to recursively scan and document large codebases.}
-        \resumeItem{Implemented context-aware code chunking to optimize token usage while maintaining semantic understanding across files.}
-        \resumeItem{Integrated into CI/CD pipelines to automatically generate and update \texttt{Documentation.md}, reducing technical debt.}
+        \resumeItem{Built a \textbf{real-time CV pipeline} (OpenCV) for driver monitoring: eye aspect ratio tracking, yawn detection, and distraction cues with on-frame temporal smoothing for stability.}
+        \resumeItem{Trained and integrated an \textbf{ML classifier} for driver state and impairment risk; used an \textbf{LLM-based alerting layer} (Cohere) to generate context-aware interventions and escalation logic.}
       \resumeItemListEnd
 
-    \resumeProjectHeading{\textbf{GuardianCruise – Driver Safety AI} \href{https://github.com/Karanvir1729/GuardianCruise}{\underline{[Repo]}} $|$ \emph{OpenCV, Python, Cohere}}{2024}
+    \resumeProjectHeading{\textbf{ML Boilerplates Library} \href{https://github.com/Karanvir1729/ML_boilerPlates}{\underline{[Repo]}} $|$ \emph{PyTorch, scikit-learn, Reproducible Training}}{2025}
       \resumeItemListStart
-        \resumeItem{Built \textbf{real-time computer vision system} using OpenCV for facial analysis: eye tracking, yawn detection, distraction recognition.}
-        \resumeItem{Trained \textbf{ML classifier} to detect mood changes and impairment; integrated \textbf{Cohere LLM} for intelligent driver alerts.}
+        \resumeItem{Created a \textbf{24+ model} implementation library covering supervised, unsupervised, and embedding workflows with consistent training loops, metrics, and experiment structure.}
+        \resumeItem{Authored technical guides and decision trees for model selection, feature engineering, and evaluation, optimizing for rapid iteration and production handoff.}
       \resumeItemListEnd
 
-    \resumeProjectHeading{\textbf{ML Boilerplates Library} \href{https://github.com/Karanvir1729/ML_boilerPlates}{\underline{[Repo]}} $|$ \emph{PyTorch, scikit-learn}}{2025}
+    \resumeProjectHeading{\textbf{Tormented by Lights – Adaptive AI Game} \href{https://karanvir1729.itch.io/tormented-by-lights}{\underline{[Game]}} $|$ \emph{Godot, GDScript, Object Pooling}}{2024}
       \resumeItemListStart
-        \resumeItem{Created comprehensive \textbf{24+ model boilerplate repository} covering supervised, unsupervised, and embedding techniques.}
-        \resumeItem{Authored technical guides and decision trees for rapid ML prototyping and model selection.}
-      \resumeItemListEnd
-
-    \resumeProjectHeading{\textbf{Tormented by Lights – Adaptive AI Game} \href{https://karanvir1729.itch.io/tormented-by-lights}{\underline{[Game]}} $|$ \emph{Godot}}{2024}
-      \resumeItemListStart
-        \resumeItem{Built \textbf{Game Jam winner} featuring adaptive difficulty ML that adjusts challenge based on player performance.}
+        \resumeItem{Built a \textbf{Game Jam winner} (2D platformer) featuring a custom \textbf{Dynamic Difficulty Adjustment (DDA)} engine that modulates obstacle speed and spawn density using a PID controller based on player reaction time.}
+        \resumeItem{Implemented efficient \textbf{object pooling} and a deterministic \textbf{physics state machine} in GDScript to handle collision detection and memory management, ensuring consistent 60FPS on web builds.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -186,37 +180,23 @@
 %----------- RESEARCH -----------
 \section{Research Experience}
   \resumeSubHeadingListStart
-    \resumeProjectHeading{\textbf{Matroid Theory \& Polytope Optimization Research} \href{https://github.com/Karanvir1729/MatriodResearch}{\underline{[Repo]}} $|$ \emph{University of Toronto}}{May 2023 -- Sep. 2023}
+    \resumeProjectHeading{\textbf{Matroid Theory \& Polytope Optimization} \href{https://github.com/Karanvir1729/MatriodResearch}{\underline{[Repo]}} $|$ \emph{University of Toronto}}{May 2023 -- Sep. 2023}
       \resumeItemListStart
-        \resumeItem{Conducted research on \textbf{volume estimation of matroid polytopes} under Prof. Ahmed Ashraf using combinatorial geometry.}
-        \resumeItem{Applied \textbf{Hepp bounds} for continuously bounding polytope volumes; validated conjectures in SageMath.}
-        \resumeItem{Published research paper on polytope duality and symbolic computation methods. \href{https://github.com/Karanvir1729/MatriodResearch/blob/main/matroidReserchPaper.pdf}{\underline{[Paper]}}}
+        \resumeItem{Conducted research on \textbf{volume estimation of matroid polytopes} under Prof. Ahmed Ashraf, establishing links between combinatorial geometry and \textbf{loss landscapes} in high-dimensional optimization.}
+        \resumeItem{Modeled \textbf{submodular set functions} as polytope constraints to analyze \textbf{greedy algorithm convergence}; findings have theoretical implications for \textbf{active learning} and \textbf{feature selection} in efficient ML.}
+        \resumeItem{Applied \textbf{Hepp bounds} to estimate volumes, validating conjectures in SageMath that bridge discrete structures with \textbf{continuous relaxation methods} used in neural architecture search.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%----------- PUBLICATIONS & TALKS -----------
-\section{Technical Writing & Documentation}
-  \resumeSubHeadingListStart
-    \resumeItem{\textbf{KPMG Data Governance Playbook} — Authored enterprise ML-enhanced automation strategies for data governance.}
-    \resumeItem{\textbf{Solver Orchestration Documentation} — Technical guide on SCIP/CPLEX integration for procurement optimization.}
-    \resumeItem{\textbf{ML Model Selection Guide} — 14KB decision tree for choosing ML algorithms based on data characteristics.}
-    \resumeItem{\textbf{Theory Summary} — 20KB ML theory reference covering training algorithms, loss functions, and model selection.}
-  \resumeSubHeadingListEnd
-
 %----------- CERTIFICATIONS & AWARDS -----------
-\section{Certifications & Awards}
+\section{Certifications \& Awards}
   \resumeSubHeadingListStart
     \resumeItem{\textbf{Hack the North Winner (2025)} — Shopify Challenge: AI Shopping with Computer Vision \& Optimization.}
+    \resumeItem{\textbf{Invited to YCombinator (YC) Dinner} — Selected for exclusive founder networking event (2025).}
+    \resumeItem{\textbf{Dean's List Scholarship} — Awarded for academic excellence (2021--Present).}
+    \resumeItem{\textbf{DAMA Certified Data Management Professional (CDMP)} — Associate Level (80\% Score).}
     \resumeItem{\textbf{DeerHacks Winner (2022)} — Best Usage of UiPath: Created NLP-powered Essay Generator.}
-    \resumeItem{\textbf{Halton Game Jam Winner (2025)} — Adaptive difficulty game AI in 24-hour build.}
-    \resumeItem{\textbf{UofT Hacks Runner-up (2023)} · \textbf{DAMA Certified Data Management Professional (CDMP)}}
-  \resumeSubHeadingListEnd
-
-%----------- ADDITIONAL -----------
-\section{Additional}
-  \resumeSubHeadingListStart
-    \resumeItem{\textbf{Open Source:} Active contributor to ML tooling; SCIP solver fork with custom extensions.}
-    \resumeItem{\textbf{Interests:} Reinforcement learning, LLM agents, operations research, game AI, multi-modal learning.}
+    \resumeItem{\textbf{Halton Game Jam Winner (2025)} · \textbf{UofT Hacks Runner-up (2023)}}
   \resumeSubHeadingListEnd
 
 \end{document}
