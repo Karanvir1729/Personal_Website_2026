@@ -10,7 +10,7 @@ Create a highly interactive “web OS” portfolio that feels like a mini deskto
 1. Resume PDF (local file provided): /mnt/data/karan_resume_one_page (7).pdf :contentReference[oaicite:0]{index=0}  
 2. Devpost: https://devpost.com/prokaranvir?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav  
 3. GitHub: https://github.com/Karanvir1729  
-4. LinkedIn: https://www.linkedin.com/in/karan-khanna-b7013b24b/  
+4. LinkedIn: https://www.linkedin.com/in/karanvir-khanna-b7013b24b/  
 
 ### Scraping requirements
 - The agent must extract and normalize:

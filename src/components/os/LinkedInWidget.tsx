@@ -3,7 +3,7 @@ import { Linkedin, ExternalLink, Briefcase } from 'lucide-react';
 export const LinkedInWidget = () => {
     return (
         <a
-            href="https://www.linkedin.com/in/karan-khanna-b7013b24b/"
+            href="https://www.linkedin.com/in/karanvir-khanna-b7013b24b/"
             target="_blank"
             rel="noopener noreferrer"
             className="block bg-[#0077b5]/80 backdrop-blur-md p-4 rounded-xl border border-white/10 w-72 shadow-2xl transition-all hover:bg-[#0077b5] group relative overflow-hidden"
